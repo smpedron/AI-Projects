@@ -325,7 +325,12 @@ const user_expertise = [
   "I already know similar systems.",
   "I have already used similar systems.",
   "I have the necessary skills for using the system",
-  "I am familiar with the topic or data this system presents"
+  "I am familiar with the topic or data this system presents",
+  "I can explain the difference between generative AI and predictive AI.",
+  "I can explain the difference between supervised, unsupervised, and reinforcement learning.",
+  "I am confident in explaining how to train deep learning algorithms.",
+  "I can explain how dimensionality reduction (e.g., PCA or t-SNE) help in pattern recognition.",
+  "I can clearly explain the challenges of overfitting in pattern recognition."
 ];
 
 const user_interface = [
