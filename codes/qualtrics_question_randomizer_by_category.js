@@ -10,8 +10,11 @@ const accuracy = [
   "The information presented was biased"
 ];
 
-const adaptability = [
-  "The system can adapt its behavior based on prior events."
+const other = [
+  "The system can adapt its behavior based on prior events.",
+  "The outcome of the system is certain.",
+  "Carefully watching the system takes time away from more important or interesting things.",
+  "I am familiar with the system."
 ];
 
 const behavioral_general = [
@@ -367,7 +370,7 @@ const user_interface = [
     }
 	
 	setRandomQuestions('accuracy', accuracy, 2);
-    setRandomQuestions('other', adaptability, 2);
+    setRandomQuestions('other', other, 2);
     setRandomQuestions('behavioral_general', behavioral_general, 2);
     setRandomQuestions('cognitive_disposition', cognitive_disposition, 2);
     setRandomQuestions('confidence_general', confidence_general, 2);
@@ -397,15 +400,12 @@ const selectedCostsStakes = getRandomItems(costs_stakes, 2);
 const selectedEmbeddedExpertiseTrainingData = getRandomItems(embedded_expertise_training_data, 2);
 const selectedHumanLikeQualities = getRandomItems(human_like_qualities, 2);
 const selectedLevelOfAutonomy = getRandomItems(level_of_autonomy, 2);
-const selectedLevelOfUncertainty = getRandomItems(level_of_uncertainty, 1);
 const selectedMoralAgency = getRandomItems(moral_agency, 2);
 const selectedPerceivedBeneficence = getRandomItems(perceived_beneficence, 2);
 const selectedPerformance = getRandomItems(performance, 2);
 const selectedPersonalBeliefs = getRandomItems(personal_beliefs, 2);
 const selectedSenseOfCollaboration = getRandomItems(sense_of_collaboration, 2);
 const selectedSenseOfPredictability = getRandomItems(sense_of_predictability, 2);
-const selectedSystemTrackRecord = getRandomItems(system_track_record, 1);
-const selectedTimeConstraints = getRandomItems(time_constraints, 1);
 const selectedTransparency = getRandomItems(transparency, 2);
 const selectedTrustGeneral = getRandomItems(trust_general, 2);
 const selectedUserControl = getRandomItems(user_control, 2);
@@ -416,7 +416,7 @@ const selectedUserInterface = getRandomItems(user_interface, 2);
 Qualtrics.SurveyEngine.setEmbeddedData('accuracy_1', selectedAccuracy[0]);
 Qualtrics.SurveyEngine.setEmbeddedData('accuracy_2', selectedAccuracy[1]);
 Qualtrics.SurveyEngine.setEmbeddedData('other_1', selectedOther[0]);
-	Qualtrics.SurveyEngine.setEmbeddedData('other_1', selectedOther[1]);
+	Qualtrics.SurveyEngine.setEmbeddedData('other_2', selectedOther[1]);
 Qualtrics.SurveyEngine.setEmbeddedData('behavioral_general_1', selectedBehavioralGeneral[0]);
 Qualtrics.SurveyEngine.setEmbeddedData('behavioral_general_2', selectedBehavioralGeneral[1]);
 Qualtrics.SurveyEngine.setEmbeddedData('cognitive_disposition_1', selectedCognitiveDisposition[0]);
