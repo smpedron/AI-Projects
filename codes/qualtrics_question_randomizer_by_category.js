@@ -59,7 +59,7 @@ const cognitive_disposition = [
   "Trusting another person is not difficult for me.",
   "My typical approach is to trust new acquaintances until they prove I should not trust them.",
   "I am seldom wary of others.",
-  "I donâ€™t mind giving up control to others over matters which are essential to my future plans.",
+  "I don't mind giving up control to others over matters which are essential to my future plans.",
   "I believe that people usually keep their promises.",
   "My tendency to trust others is high.",
   "Even when I have a lot to do, I am likely to watch automation carefully for errors.",
@@ -460,4 +460,5 @@ Qualtrics.SurveyEngine.setEmbeddedData('user_interface_1', selectedUserInterface
 Qualtrics.SurveyEngine.setEmbeddedData('user_interface_2', selectedUserInterface[1]);
 
 });
+
 
