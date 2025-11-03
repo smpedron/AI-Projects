@@ -96,33 +96,34 @@ Qualtrics.SurveyEngine.addOnload(function() {
     });
 
     // Add click event listener to each option
-    options.forEach(function(option) {
-        option.addEventListener('click', function() {
-            if (!selectedOption) {  // Allow selection only if none has been made
-                selectedOption = option;
+options.forEach(function(option) {
+    option.addEventListener('click', function(event) {
+        if (!selectedOption) {  
+            selectedOption = option;
 
-                // Update label text for selected option
-                var currentLabel = document.querySelector('label[for="' + option.id + '"]');
-                if (currentLabel) {
-                    currentLabel.innerText = "Firing"; 
-                    currentLabel.style.color = "green"; 
-                }
-
-                option.disabled = true; // Disable selected option to prevent re-clicking
-
-                // Disable all other options and mark them as "No Mid-Attack Changes"
-                options.forEach(function(opt) {
-                    if (opt !== selectedOption) {
-                        opt.disabled = true;
-                        var otherLabel = document.querySelector('label[for="' + opt.id + '"]');
-                        if (otherLabel) {
-                            otherLabel.innerText = "No Mid-Attack Changes"; 
-                            otherLabel.style.color = "red"; 
-                        }
-                    }
-                });
+            // Update label
+            var currentLabel = document.querySelector('label[for="' + option.id + '"]');
+            if (currentLabel) {
+                currentLabel.innerText = "Firing"; 
+                currentLabel.style.color = "green"; 
             }
-        });
+
+            // Disable all options to block further selection
+            options.forEach(function(opt) {
+                opt.disabled = true;
+                var otherLabel = document.querySelector('label[for="' + opt.id + '"]');
+                if (otherLabel && opt !== selectedOption) {
+                    otherLabel.innerText = "No Mid-Attack Changes"; 
+                    otherLabel.style.color = "red"; 
+                }
+            });
+
+        } else {
+            // Prevent selecting another option after one is already selected
+            event.preventDefault(); 
+        }
     });
 });
+});
+
 
